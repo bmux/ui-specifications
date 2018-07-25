@@ -1,0 +1,428 @@
+// TEST
+$btn-border-width: 2px;
+$btn-padding: 2px;
+$btn-transparency-hover: rgba(0, 0, 0, 0.1);
+$btn-transparency-active: rgba(0, 0, 0, 0.05);
+
+.btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  text-align: center;
+  min-width: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: $btn-padding*2 $btn-padding;
+  border: $btn-border-width solid transparent;
+  border-radius: $border-radius-m;
+
+  & > .child {
+    padding: 0 $btn-padding;
+  }
+}
+
+//button sizes
+.btn-size {
+  &-xs {
+    min-height: 20px;
+    font-size: 10px;
+    line-height: 12px;
+    padding: $btn-padding $btn-padding;
+    .btnWrapper.reservespace & {
+      margin: 12px 0px; //20 + 12*2 = 44
+    }
+  }
+	&-s { // TBD
+    min-height: 24px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: $btn-padding $btn-padding;
+    .btnWrapper.reservespace & {
+      margin: 4px 0px; //36 + 4*2 = 44
+    }
+  }
+	&-m { // TBD
+    min-height: 28px;
+    font-size: 16px;
+    line-height: 20px;
+    .btnWrapper.reservespace & {
+      margin: 4px 0px; //36 + 4*2 = 44
+    }
+  }
+  &-l {
+    min-height: 36px;
+    font-size: 18px;
+    line-height: 20px;
+    .btnWrapper.reservespace & {
+      margin: 4px 0px; //36 + 4*2 = 44
+    }
+  }
+	&-xl { // TBD
+    min-height: 48px;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 4px*2 4px;
+    //not necessary to reserve space because 56 > $min-clickable-height
+    & > .child {
+      padding: 0 4px;
+    }
+  }
+  &-xxl {
+    min-height: 56px;
+    font-size: 32px;
+    line-height: 28px;
+    padding: 4px*2 4px;
+    //not necessary to reserve space because 56 > $min-clickable-height
+    & > .child {
+      padding: 0 4px;
+    }
+  }
+}
+
+//button styles
+.btnWrapper {
+  display: inline-flex;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle; //align the center of the button (instead of the containing text) to the surroundings
+  position: relative; // act as a container for the clickable area
+  &.stretch {
+    display: flex;
+    .btn {
+      flex-grow: 1;
+    }
+  }
+
+  &.noreservespace {
+    margin: 0; // stop reserving space via margins
+    &::before {
+      content: "";
+      //outline: 1px dashed rgba(0, 0, 255, 0.5); //DELETE ME
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      bottom: 0;
+      margin: 0;
+      height: $min-clickable-height;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.reservespace {
+    //outline: 1px dashed rgba(0, 255, 0, 0.5); //DELETE ME
+  }
+
+  &-action {
+    .btn {
+      color: white;
+      fill: white;
+      border-color: $c-blue-600;
+      background-color: $c-blue-600;
+    }
+    &:hover .btn {
+      border-color: $c-blue-700;
+      background-color: $c-blue-700;
+    }
+    &:active .btn {
+      border-color: $c-blue-500;
+      background-color: $c-blue-500;
+    }
+    &-ghost {
+      .btn {
+        color: $c-blue-700;
+        fill: $c-blue-700;
+        border-color: $c-blue-600;
+      }
+      &:hover .btn {
+        color: white;
+        fill: white;
+        border-color: $c-blue-600;
+        background-color: $c-blue-600;
+      }
+      &:active .btn {
+        color: white;
+        fill: white;
+        border-color: $c-blue-500;
+        background-color: $c-blue-500;
+      }
+    }
+    &-transparent {
+      .btn {
+        color: $c-blue-700;
+        fill: $c-blue-700;
+      }
+      &:hover .btn {
+        background-color: $btn-transparency-hover;
+      }
+      &:active .btn {
+        background-color: $btn-transparency-active;
+      }
+    }
+  }
+  // end of action
+  &-confirm {
+    .btn {
+      color: white;
+      fill: white;
+      border-color: $c-green-600;
+      background-color: $c-green-600;
+    }
+    &:hover .btn {
+      border-color: $c-green-700;
+      background-color: $c-green-700;
+    }
+    &:active .btn {
+      border-color: $c-green-500;
+      background-color: $c-green-500;
+    }
+    &-ghost {
+      .btn {
+        color: $c-green-700;
+        fill: $c-green-700;
+        border-color: $c-green-600;
+      }
+      &:hover .btn {
+        color: white;
+        fill: white;
+        border-color: $c-green-600;
+        background-color: $c-green-600;
+      }
+      &:active .btn {
+        color: white;
+        fill: white;
+        border-color: $c-green-500;
+        background-color: $c-green-500;
+      }
+    }
+    &-transparent {
+      .btn {
+        color: $c-green-700;
+        fill: $c-green-700;
+      }
+      &:hover .btn {
+        background-color: $btn-transparency-hover;
+      }
+      &:active .btn {
+        background-color: $btn-transparency-active;
+      }
+    }
+  }
+  // end of confirm
+  &-abort {
+    .btn {
+      color: white;
+      fill: white;
+      border-color: $c-red-600;
+      background-color: $c-red-600;
+    }
+    &:hover .btn {
+      border-color: $c-red-700;
+      background-color: $c-red-700;
+    }
+    &:active .btn {
+      border-color: $c-red-500;
+      background-color: $c-red-500;
+    }
+    &-ghost {
+      .btn {
+        color: $c-red-700;
+        fill: $c-red-700;
+        border-color: $c-red-600;
+      }
+      &:hover .btn {
+        color: white;
+        fill: white;
+        border-color: $c-red-600;
+        background-color: $c-red-600;
+      }
+      &:active .btn {
+        color: white;
+        fill: white;
+        border-color: $c-red-500;
+        background-color: $c-red-500;
+      }
+    }
+    &-transparent {
+      .btn {
+        color: $c-red-700;
+        fill: $c-red-700;
+      }
+      &:hover .btn {
+        background-color: $btn-transparency-hover;
+      }
+      &:active .btn {
+        background-color: $btn-transparency-active;
+      }
+    }
+  }
+  // end of abort
+  &-warning {
+    .btn {
+      color: $c-gray-800;
+      fill: $c-gray-800;
+      border-color: $c-yellow-500;
+      background-color: $c-yellow-500;
+    }
+    &:hover .btn {
+      border-color: $c-yellow-600;
+      background-color: $c-yellow-600;
+    }
+    &:active .btn {
+      border-color: $c-yellow-400;
+      background-color: $c-yellow-400;
+    }
+    &-ghost {
+      .btn {
+        color: $c-yellow-800;
+        fill: $c-yellow-700;
+        border-color: $c-yellow-600;
+      }
+      &:hover .btn {
+        color: $c-gray-800;
+        fill: $c-gray-800;
+        border-color: $c-yellow-600;
+        background-color: $c-yellow-600;
+      }
+      &:active .btn {
+        color: $c-gray-800;
+        fill: $c-gray-800;
+        border-color: $c-yellow-500;
+        background-color: $c-yellow-500;
+      }
+    }
+    &-transparent {
+      .btn {
+        color: $c-yellow-800;
+        fill: $c-yellow-700;
+      }
+      &:hover .btn {
+        background-color: $btn-transparency-hover;
+      }
+      &:active .btn {
+        background-color: $btn-transparency-active;
+      }
+    }
+  }
+  // end of warning
+  &-view {
+    .btn {
+      color: white;
+      fill: white;
+      border-color: $c-gray-600;
+      background-color: $c-gray-600;
+    }
+    &:hover .btn {
+      border-color: $c-gray-700;
+      background-color: $c-gray-700;
+    }
+    &:active .btn {
+      border-color: $c-gray-500;
+      background-color: $c-gray-500;
+    }
+    &-ghost {
+      .btn {
+        color: $c-gray-700;
+        fill: $c-gray-700;
+        border-color: $c-gray-600;
+      }
+      &:hover .btn {
+        color: white;
+        fill: white;
+        border-color: $c-gray-600;
+        background-color: $c-gray-600;
+      }
+      &:active .btn {
+        color: white;
+        fill: white;
+        border-color: $c-gray-500;
+        background-color: $c-gray-500;
+      }
+    }
+    &-transparent {
+      .btn {
+        color: $c-gray-700;
+        fill: $c-gray-700;
+      }
+      &:hover .btn {
+        background-color: $btn-transparency-hover;
+      }
+      &:active .btn {
+        background-color: $btn-transparency-active;
+      }
+    }
+  }
+  // end of view
+  &-attention {
+    .btn {
+      color: white;
+      fill: white;
+      border-color: $c-orange-600;
+      background-color: $c-orange-600;
+    }
+    &:hover .btn {
+      border-color: $c-orange-700;
+      background-color: $c-orange-700;
+    }
+    &:active .btn {
+      border-color: $c-orange-500;
+      background-color: $c-orange-500;
+    }
+    &-ghost {
+      .btn {
+        color: $c-orange-700;
+        fill: $c-orange-700;
+        border-color: $c-orange-600;
+      }
+      &:hover .btn {
+        color: white;
+        fill: white;
+        border-color: $c-orange-600;
+        background-color: $c-orange-600;
+      }
+      &:active .btn {
+        color: white;
+        fill: white;
+        border-color: $c-orange-500;
+        background-color: $c-orange-500;
+      }
+    }
+    &-transparent {
+      .btn {
+        color: $c-orange-700;
+        fill: $c-orange-700;
+      }
+      &:hover .btn {
+        background-color: $btn-transparency-hover;
+      }
+      &:active .btn {
+        background-color: $btn-transparency-active;
+      }
+    }
+  }
+  // end of attention
+  &-disabled {
+    &,
+    &-ghost,
+    &-transparent {
+      cursor: default;
+    }
+    .btn {
+      color: white;
+      fill: white;
+      border-color: $c-gray-300;
+      background-color: $c-gray-300;
+      cursor: default;
+    }
+    &-ghost .btn {
+      color: $c-gray-400;
+      fill: $c-gray-400;
+      border-color: $c-gray-300;
+      cursor: default;
+    }
+    &-transparent .btn {
+      color: $c-gray-400;
+      fill: $c-gray-400;
+      cursor: default;
+    }
+  }
+}

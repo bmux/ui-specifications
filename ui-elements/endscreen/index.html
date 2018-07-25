@@ -1,0 +1,752 @@
+<html>
+
+<head>
+	<title>Drag and Drop</title>
+	<meta charset="UTF-8" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet/less" type="text/css" href="../scss/_setup.scss" />
+</head>
+
+<body class="body">
+
+
+
+	<p class="template-title">Endscreen Elements</p>
+
+	<p class="note">Note: The margins for the buttons here need reworking.</p>
+	<p class="note">All strings that exist in the CMS as uppercase must be changed to normal text!</p>
+	<div class="tablet-dialog-dummy">
+		<div class="endscreen">
+
+			<img class="star" src="../img/StarEmpty.svg" />
+
+			<div class="section headline">
+				Your result: <span class="count">10/12</span> points.
+			</div>
+
+			<div class="section message-text">
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+				aliquyam erat, sed diam voluptua.
+			</div>
+
+			<div class="section animated-result">
+				<div class="betty-endscreen"></div>
+				<div class="result-bar">
+					<div class="bar-container">
+						<div class="result-value"></div>
+						<img src="../img/Coin.svg" class="coin coin-1" />
+						<img src="../img/Coin.svg" class="coin coin-2" />
+						<img src="../img/CoinEmpty.svg" class="coin coin-3" />
+					</div>
+				</div>
+			</div>
+
+			<div class="section task-states">
+				<table class="task-table" width="100%" border="1">
+					<tr>
+						<td><img class="task-open" src="../img/TaskOpen.svg" />Exercise 1</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 2</td>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise 3</td>
+						<td><img class="task-wrong" src="../img/icon-times-s-bold-12-12.svg" />Exercise 4</td>
+					</tr>
+					<tr>
+						<td><img class="task-wrong" src="../img/TaskOpen.svg" />Exercise 5</td>
+						<td><img class="task-right" src="../img/TaskOpen.svg" />Exercise 6</td>
+						<td><img class="task-right" src="../img/TaskOpen.svg" />Exercise 7</td>
+						<td><img class="task-wrong" src="../img/TaskOpen.svg" />Exercise 8</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="context-notification context-notification-attention context-notification-full-width">
+				You are only allowed to hand in the test once. A second attempt is not possible.
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-attention ">
+					<div class="btn btn-size-m"><span class="child">Submit</span></div>
+				</div>
+				<div class="btnWrapper btnWrapper-view ">
+					<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<p class="template-title">Exercise Mode Endscreen Tablet</p>
+	<p class="note">Note: Maybe we should add a class that allows min-widths for buttons.</p>
+	<div class="tablet-dialog-dummy">
+		<div class="endscreen">
+
+			<img class="star" src="../img/StarEmpty.svg" />
+
+			<div class="section headline">
+				Your result: <span class="count">10/12</span> points.
+			</div>
+
+			<div class="section animated-result">
+				<div class="betty-endscreen"></div>
+				<div class="result-bar">
+					<div class="bar-container">
+						<div class="result-value"></div>
+						<img src="../img/Coin.svg" class="coin coin-1" />
+						<img src="../img/Coin.svg" class="coin coin-2" />
+						<img src="../img/CoinEmpty.svg" class="coin coin-3" />
+					</div>
+				</div>
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-action ">
+					<div class="btn btn-size-m"><span class="child">OK</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+	<p class="template-title">Endscreen Test Prevalidation Incomplete</p>
+
+	<div class="tablet-dialog-dummy">
+		<div class="endscreen">
+
+			<div class="section headline">
+				Do you want to hand in your test?
+			</div>
+
+			<div class="section message-text">
+				You have not completed all the questions. Do you want to quit the test and have your answers checked?
+			</div>
+
+			<div class="section task-states">
+				<table class="task-table" width="100%" border="1">
+					<tr>
+						<td><img class="task-open" src="../img/TaskOpen.svg" />Exercise 1</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 2</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 3</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 4</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 5</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 6</td>
+						<td><img class="task-open" src="../img/TaskOpen.svg" />Exercise 7</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 8</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 9</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 10</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 11</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 12</td>
+					</tr>
+					<tr>
+						<td><img class="task-open" src="../img/TaskOpen.svg" />Exercise 13</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 14</td>
+						<td><img class="task-open" src="../img/TaskOpen.svg" />Exercise 15</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 16</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-attention ">
+					<div class="btn btn-size-m"><span class="child">Submit</span></div>
+				</div>
+				<div class="btnWrapper btnWrapper-view ">
+					<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+<p class="template-title">Endscreen Test Prevalidation Incomplete</p>
+
+<div class="tablet-dialog-dummy">
+	<div class="endscreen">
+
+		<div class="section headline">
+			Do you want to hand in your test?
+		</div>
+
+		<div class="section message-text">
+			You have not completed all the questions. Do you want to quit the test and have your answers checked?
+		</div>
+
+		<div class="section task-states">
+			<table class="task-table" width="100%" border="1">
+				<tr>
+					<td><img class="task-open" src="../img/TaskOpen.svg" />Exercise 1</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 2</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 3</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 4</td>
+				</tr>
+				<tr>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 5</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 6</td>
+					<td><img class="task-open" src="../img/TaskOpen.svg" />Exercise 7</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 8</td>
+				</tr>
+				<tr>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 9</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 10</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 11</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 12</td>
+				</tr>
+				<tr>
+					<td><img class="task-open" src="../img/TaskOpen.svg" />Exercise 13</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 14</td>
+					<td><img class="task-open" src="../img/TaskOpen.svg" />Exercise 15</td>
+					<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 16</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="context-notification context-notification-attention context-notification-full-width">
+			You are only allowed to hand in the test once. A second attempt is not possible.
+		</div>
+
+		<div class="section button-row">
+			<div class="btnWrapper btnWrapper-attention ">
+				<div class="btn btn-size-m"><span class="child">Submit</span></div>
+			</div>
+			<div class="btnWrapper btnWrapper-view ">
+				<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+	<p class="template-title">Endscreen Test Prevalidation Complete</p>
+
+	<div class="tablet-dialog-dummy">
+		<div class="endscreen">
+
+			<div class="section headline">
+				Do you want to hand in your test?
+			</div>
+
+			<div class="section message-text">
+				Do you want to quit the test and have your answers checked?
+			</div>
+
+			<div class="section task-states">
+				<table class="task-table" width="100%" border="1">
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 1</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 2</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 3</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 4</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 5</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 6</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 7</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 8</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 9</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 10</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 11</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 12</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 13</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 14</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 15</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 16</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-attention ">
+					<div class="btn btn-size-m"><span class="child">Submit</span></div>
+				</div>
+				<div class="btnWrapper btnWrapper-view ">
+					<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+	<p class="template-title">Endscreen Test Prevalidation Complete Only One Attempt Allowed</p>
+
+	<div class="tablet-dialog-dummy">
+		<div class="endscreen">
+
+			<div class="section headline">
+				Do you want to hand in your test?
+			</div>
+
+			<div class="section message-text">
+				Do you want to quit the test and have your answers checked?
+			</div>
+
+			<div class="section task-states">
+				<table class="task-table" width="100%" border="1">
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 1</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 2</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 3</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 4</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 5</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 6</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 7</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 8</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 9</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 10</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 11</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 12</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 13</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 14</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 15</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 16</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="context-notification context-notification-attention context-notification-full-width">
+				You are only allowed to hand in the test once. A second attempt is not possible.
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-attention ">
+					<div class="btn btn-size-m"><span class="child">Submit</span></div>
+				</div>
+				<div class="btnWrapper btnWrapper-view ">
+					<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+	<p class="template-title">Endscreen Test Overflow Scrollbar</p>
+
+	<div class="tablet-dialog-dummy">
+		<div class="endscreen">
+
+			<div class="section headline">
+				Do you want to hand in your test?
+			</div>
+
+			<div class="section message-text">
+				Do you want to quit the test and have your answers checked?
+			</div>
+
+			<div class="section task-states">
+				<table class="task-table" width="100%" border="1">
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 1</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 2</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 3</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 4</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 5</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 6</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 7</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 8</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 9</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 10</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 11</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 12</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 13</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 14</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 15</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 16</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 17</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 18</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 19</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 20</td>
+					</tr>
+					<tr>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 21</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 22</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 23</td>
+						<td><img class="task-done" src="../img/TaskDone.svg" />Exercise 24</td>
+					</tr>
+				</table>
+			</div>
+
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-attention ">
+					<div class="btn btn-size-m"><span class="child">Submit</span></div>
+				</div>
+				<div class="btnWrapper btnWrapper-view ">
+					<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<p class="template-title">Endscreen Test Postvalidation Coins and Stars</p>
+
+	<div class="tablet-dialog-dummy">
+		<div class="endscreen">
+
+			<img class="star" src="../img/Star.svg" />
+
+			<div class="section headline">
+				 Your result: <span class="count">11/14</span> points.
+			</div>
+
+
+			<div class="section message-text">
+				You have solved 11 of 14 questions without a mistake.
+			</div>
+
+			<div class="section animated-result">
+				<div class="result-bar">
+					<div class="bar-container">
+						<div class="result-value"></div>
+						<img src="../img/Coin.svg" class="coin coin-1" />
+						<img src="../img/Coin.svg" class="coin coin-2" />
+						<img src="../img/Coin.svg" class="coin coin-3" />
+					</div>
+				</div>
+			</div>
+
+			<div class="section task-states">
+				<table class="task-table" width="100%" border="1">
+					<tr>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+						<td><img class="task-wrong" src="../img/icon-times-s-bold-12-12.svg" />Exercise </td>
+						<td><img class="task-wrong" src="../img/icon-times-s-bold-12-12.svg" />Exercise </td>
+					</tr>
+					<tr>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+						<td><img class="task-wrong" src="../img/icon-times-s-bold-12-12.svg" />Exercise </td>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+					</tr>
+					<tr>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+					</tr>
+					<tr>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+						<td><img class="task-right" src="../img/icon-check-s-bold-12-10.svg" />Exercise </td>
+						<td class="empty"></td>
+						<td class="empty"></td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-action ">
+					<div class="btn btn-size-m"><span class="child">OK</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+	<p class="template-title">Endscreen Message</p>
+
+	<div class="tablet-dialog-dummy">
+		<div class="endscreen">
+
+			<div class="section headline">
+				Your result:
+			</div>
+
+			<div class="section message-text">
+				You have finished the test.
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-action ">
+					<div class="btn btn-size-m"><span class="child">OK</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<p class="template-title">Exercise Mode Endscreen Phone</p>
+	<p class="note">Note: Maybe we should add a class that allows min-widths for buttons.</p>
+	<div class="phone-dialog-dummy">
+		<div class="endscreen">
+
+			<img class="star" src="../img/StarEmpty.svg" />
+
+			<div class="section headline">
+				Your result: <span class="count">10/12</span> points.
+			</div>
+
+			<div class="section animated-result">
+				<div class="betty-endscreen"></div>
+				<div class="result-bar">
+					<div class="bar-container">
+						<div class="result-value"></div>
+						<img src="../img/Coin.svg" class="coin coin-1" />
+						<img src="../img/Coin.svg" class="coin coin-2" />
+						<img src="../img/CoinEmpty.svg" class="coin coin-3" />
+					</div>
+				</div>
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-action ">
+					<div class="btn btn-size-m"><span class="child">OK</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+	<p class="template-title">Test Mode Endscreen Phone</p>
+	<p class="note">Note: Maybe we should add a class that allows min-widths for buttons.</p>
+	<div class="phone-dialog-dummy">
+		<div class="endscreen">
+
+			<img class="star" src="../img/StarEmpty.svg" />
+
+			<div class="section headline">
+				Your result: <span class="count">10/12</span> points.
+			</div>
+
+			<div class="section animated-result">
+				<div class="betty-endscreen"></div>
+				<div class="result-bar">
+					<div class="bar-container">
+						<div class="result-value"></div>
+						<img src="../img/Coin.svg" class="coin coin-1" />
+						<img src="../img/Coin.svg" class="coin coin-2" />
+						<img src="../img/CoinEmpty.svg" class="coin coin-3" />
+					</div>
+				</div>
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-view">
+					<div class="btn btn-size-m"><span class="child">Exercise Overview</span></div>
+				</div>
+				<div class="btnWrapper btnWrapper-action ">
+					<div class="btn btn-size-m"><span class="child">Done</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+		<p class="template-title">
+
+			Endscreen Test Prevalidation Incomplete Phone</p>
+
+		<div class="phone-dialog-dummy">
+			<div class="endscreen">
+
+				<div class="section headline">
+					Do you want to hand in your test?
+				</div>
+
+				<div class="section message-text">
+					You have not completed all the questions. Do you want to quit the test and have your answers checked?
+				</div>
+
+				<div class="exercise-navigation-dummy">
+					<span class="nav-item">6</span>
+					<span class="nav-item">7</span>
+					<span class="nav-item">12</span>
+					<span class="nav-item">14</span>
+				</div>
+
+				<div class="section button-row">
+					<div class="btnWrapper btnWrapper-attention ">
+						<div class="btn btn-size-m"><span class="child">Submit</span></div>
+					</div>
+					<div class="btnWrapper btnWrapper-view ">
+						<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<p class="template-title">
+
+			Endscreen Test Prevalidation Incomplete Phone</p>
+
+		<div class="phone-dialog-dummy">
+			<div class="endscreen">
+
+				<div class="section headline">
+					Do you want to hand in your test?
+				</div>
+
+				<div class="section message-text">
+					You have not completed all the questions. Do you want to quit the test and have your answers checked?
+				</div>
+
+				<div class="exercise-navigation-dummy">
+					<span class="nav-item">6</span>
+					<span class="nav-item">7</span>
+					<span class="nav-item">12</span>
+					<span class="nav-item">14</span>
+				</div>
+
+				<div class="context-notification context-notification-attention context-notification-full-width">
+					You are only allowed to hand in the test once. A second attempt is not possible.
+				</div>
+
+				<div class="section button-row">
+					<div class="btnWrapper btnWrapper-attention ">
+						<div class="btn btn-size-m"><span class="child">Submit</span></div>
+					</div>
+					<div class="btnWrapper btnWrapper-view ">
+						<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+	<p class="template-title">Endscreen Test Prevalidation Complete Only One Attempt Phone</p>
+
+	<div class="phone-dialog-dummy">
+		<div class="endscreen">
+
+			<div class="section headline">
+				Do you want to hand in your test?
+			</div>
+
+			<div class="section message-text">
+				Do you want to quit the test and have your answers checked?
+			</div>
+
+			<div class="context-notification context-notification-attention context-notification-full-width">
+				You are only allowed to hand in the test once. A second attempt is not possible.
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-attention ">
+					<div class="btn btn-size-m"><span class="child">Submit</span></div>
+				</div>
+				<div class="btnWrapper btnWrapper-view ">
+					<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+<p class="template-title">Endscreen Test Prevalidation Complete Phone</p>
+
+<div class="phone-dialog-dummy">
+	<div class="endscreen">
+
+		<div class="section headline">
+			Do you want to hand in your test?
+		</div>
+
+		<div class="section message-text">
+			Do you want to quit the test and have your answers checked?
+		</div>
+
+		<div class="section button-row">
+			<div class="btnWrapper btnWrapper-attention ">
+				<div class="btn btn-size-m"><span class="child">Submit</span></div>
+			</div>
+			<div class="btnWrapper btnWrapper-view ">
+				<div class="btn btn-size-m"><span class="child">Resume test</span></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+	<p class="template-title">
+
+		Endscreen Message</p>
+
+	<div class="phone-dialog-dummy">
+		<div class="endscreen">
+
+			<div class="section headline">
+				Your result:
+			</div>
+
+			<div class="section message-text">
+				You have finished the test.
+			</div>
+
+			<div class="section button-row">
+				<div class="btnWrapper btnWrapper-action ">
+					<div class="btn btn-size-m"><span class="child">OK</span></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+</body>
+
+</html>

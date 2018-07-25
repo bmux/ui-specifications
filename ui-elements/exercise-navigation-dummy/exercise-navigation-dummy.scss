@@ -1,0 +1,37 @@
+$exercise-navigation-dummy-radius: 18px;
+
+.exercise-navigation-dummy {
+    line-height: 0;
+  text-align:justify;
+  .nav-item {
+    box-sizing: border-box;
+    width: $exercise-navigation-dummy-radius*2;
+    height: $exercise-navigation-dummy-radius*2;
+    border: 2px solid $c-blue-600;
+    display: inline-block;
+    border-radius: $exercise-navigation-dummy-radius;
+    text-align: center;
+    padding: 4px;
+    padding-top: 6px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $c-blue-700;
+    font-weight: 500;
+    margin-bottom: $exercise-navigation-dummy-radius/1.75;
+
+    &.done {
+      background: $c-blue-600;
+      color: $c-white;
+    }
+  }
+
+  .hack-item {
+    /* just put those things here to have a quick demo */
+    width: $exercise-navigation-dummy-radius*2;
+    height: 1px;
+    background: transparent;
+    display: inline-block;
+    margin: 0;
+  }
+}
+

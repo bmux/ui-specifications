@@ -1,0 +1,163 @@
+.content-container {
+  border-width: $line-width-xl;
+  border-style: solid;
+  border-radius: $line-width-xl;
+  border-color: $c-gray-600;
+}
+
+.content-container-header-wrapper {
+    display: table;
+    width: 100%;
+}
+
+.content-container-header {
+	font-size: $font-size-m;
+	line-height: $line-height-m;
+  position: relative;
+  display: table-row;
+  overflow: auto;
+}
+
+.content-container-toggle,
+.content-container-title {
+    display: table-cell;
+    width: 0;
+}
+
+.content-container-title {
+    padding: $space-xs;
+    vertical-align: middle;
+    font-weight: bold;
+    width: 100%;
+    color: $c-text-medium;
+}
+
+.content-container-body {
+  padding-left: $exercise-horizontal-content-spacing-xs;
+  padding-right: $exercise-horizontal-content-spacing-xs;
+  padding-bottom: $exercise-vertical-content-spacing-xs;
+  padding-top: $exercise-vertical-content-spacing-xs;
+}
+
+.content-container-has-title .content-container-body {
+  padding-top: 0;
+}
+
+.content-container-toggle-btn {
+  min-width: $min-clickable-width;
+  min-height: $min-clickable-height;
+  position: relative;
+  display: inline-block;
+  top: 0 - $border-width-l;
+  right: 0 - $border-width-l;
+  margin-bottom: 0 - ($border-width-l * 2);
+  text-align: center;
+  box-sizing: border-box;
+  padding: $space-s;
+  text-align: horizontal;
+}
+
+.content-container-toggle-icon {
+  position: relative;
+  width: $line-height-m;
+  height: $line-height-m;
+  background: transparent;
+  border: transparent solid $border-width-l;
+  border-radius: $border-radius-m;
+}
+
+.content-container-toggle-btn:hover .content-container-toggle-icon {
+  background: $c-gray-200;
+  border-color: $c-gray-200;
+  border-radius: $border-radius-m;
+  cursor: pointer;
+}
+
+.content-container-toggle-icon span {
+  position: absolute;
+  transition: .3s;
+  background: $c-text-bright;
+}
+
+.content-container-toggle-icon span:first-of-type {
+  height: $line-height-m;
+  width: $line-width-m;
+  left: ($line-height-m - $line-width-m) / 2;
+  transform: rotate(90deg);
+}
+
+.content-container-toggle-icon span:last-of-type {
+  left: 0;
+  right: 0;
+  height: $line-width-m;
+  top: ($line-height-m - $line-width-m) / 2;
+  transform: rotate(180deg);
+}
+
+.content-container-closed .content-container-toggle-icon span:first-of-type {
+  transform: rotate(0);
+}
+
+.content-container-closed .content-container-toggle-icon span:last-of-type {
+  transform: rotate(0);
+}
+
+.content-container-neutral {
+  border-color: $c-gray-600;
+  .content-container-title {
+    color: $c-gray-700;
+  }
+  .content-container-toggle-icon span {
+    background-color: $c-gray-700;
+  }
+}
+
+.content-container-action {
+  border-color: $c-blue-600;
+  .content-container-title {
+    color: $c-blue-700;
+  }
+  .content-container-toggle-icon span {
+    background-color: $c-blue-700;
+  }
+}
+
+.content-container-right {
+  border-color: $c-green-600;
+  .content-container-title {
+    color: $c-green-700;
+  }
+  .content-container-toggle-icon span {
+    background-color: $c-green-700;
+  }
+}
+
+.content-container-wrong {
+  border-color: $c-red-600;
+  .content-container-title {
+    color: $c-red-700;
+  }
+  .content-container-toggle-icon span {
+    background-color: $c-red-700;
+  }
+}
+
+.content-container-warning {
+  border-color: $c-yellow-600;
+  .content-container-title {
+    color: $c-yellow-700;
+  }
+  .content-container-toggle-icon span {
+    background-color: $c-yellow-700;
+  }
+}
+
+.content-container-attention {
+  border-color: $c-orange-600;
+  .content-container-title {
+    color: $c-orange-700;
+  }
+  .content-container-toggle-icon span {
+    background-color: $c-orange-700;
+  }
+}

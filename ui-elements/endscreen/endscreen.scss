@@ -1,0 +1,160 @@
+/* Bitte Grundlegende Schriftformate aus layout.css für html und body beachten */
+$coin-diameter: 32px;
+$task-state-icon-offset: 1px;
+
+.endscreen {
+	font-size: $font-size-m;
+	line-height: $line-height-m;
+	text-align: left;
+	background-image: url(../img/Background.svg);
+	background-repeat: repeat-x;
+	background-color: $c-blue-100;
+	padding: $exercise-vertical-content-spacing-m $space-xxl $space-xxs;
+}
+
+.phone-dialog-dummy .endscreen {
+	padding: $exercise-vertical-content-spacing-m $exercise-vertical-content-spacing-m $space-xxs;
+}
+
+.endscreen {
+	.section {
+		margin-top: $space-l;
+		margin-bottom: $space-l;
+		width: 100%;
+		//background: rgba(0,0,0,0.1);
+	}
+					
+	.star { /* .section */
+		float: right;
+		position: relative;
+		margin-top: $space-l;
+		left: $space-s;
+		top: -$space-l;
+	}
+
+	.headline { /* .section */
+		color: $c-blue-800;
+		font-size: $font-size-xxl;
+		line-height: $line-height-xl;
+		margin-top: $space-s;
+	}
+
+	.headline span { /* counts of achieved points */
+		font-size: $font-size-xxxl;
+		line-height: $line-height-xl;
+	}
+
+	.message-text { /* .section */
+		color: $c-text-dark;
+		font-weight: bold;
+	}
+							
+	.animated-result {
+		padding: $space-xs 0;
+	}
+
+// betty-endscreen is just a placeholder for the animated mascot
+	.betty-endscreen {
+		height: 150px;
+		background-image: url(../img/Betty.svg);
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		width: 50%
+	}
+
+	.result-bar {
+	}
+
+	.bar-container {
+		height: $space-m;
+		background: $c-white;
+		border: $border-width-s solid $c-group-border;
+		padding: $border-width-s;
+		position: relative;
+	}
+
+	.result-value {
+		width: 80% /* this will be dynamically calculated */;
+		height: $space-m;
+		background: $c-blue-600;
+	}
+
+	.coin {
+		position: absolute;
+		width: $coin-diameter;
+		height: $coin-diameter;
+		top: -($coin-diameter/4);
+		margin-left: -$coin-diameter/2;
+	}
+
+	.coin-1 {
+		left: 60%;
+	}
+
+	.coin-2 {
+		left: 75%;
+	}
+
+	.coin-3 {
+		left: 90%;
+	}
+
+	.task-states {
+		max-height: 200px;
+		overflow-x: hide;
+		overflow-y: auto;
+		border: $border-width-s solid $c-group-border;
+		box-sizing: border-box; /* makes inner table respect the width of the layout */
+		max-height: ($min-clickable-height * 5) - ($min-clickable-height/2); /* just for shwocase */
+	}
+
+	.task-table {
+		background: $c-white;
+		border-collapse: collapse;
+
+	}
+
+	.task-table tr {
+		border-bottom: $border-width-s solid $c-element-border;
+	}
+
+	.task-table tr:last-child {
+		border-bottom: none;
+	}
+
+	.task-table td {
+		border-right: $border-width-s solid $c-element-border;
+		vertical-align: middle;
+		height: $min-clickable-height;
+		padding: $space-xxs $space-xs;
+		cursor: pointer;
+		font-size: $font-size-s;
+		width: 25%;
+	}
+
+	.task-table td:hover {
+		background: $c-gray-100;
+	}
+
+	.task-table td.empty:hover {
+		background: transparent;
+		cursor: auto;
+	}
+
+	.task-table td:last-child {
+		border-right: none;
+	}
+
+	.task-open,
+	.task-done,
+	.task-right,
+	.task-wrong {
+		margin-right: $space-xs;
+		position: relative;
+		top: $task-state-icon-offset;
+	}
+							
+	.button-row {
+		text-align: center;
+	}
+}

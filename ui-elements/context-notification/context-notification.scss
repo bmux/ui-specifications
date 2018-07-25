@@ -1,0 +1,51 @@
+.context-notification {
+	padding: $space-xs $space-xs;
+	width: auto;
+	display: inline-block;
+	font-size: $font-size-m;
+	line-height: $line-height-m;
+}
+
+.context-notification {
+	//margin-bottom: $space-s;
+}
+
+.context-notification-full-width {
+	display: block;
+}
+
+.context-notification-neutral {
+	border: $border-width-s solid $c-gray-600;
+	color: $c-gray-700;
+	background: $c-gray-100;
+}
+
+.context-notification-action {
+	border: $border-width-s solid $c-blue-600;
+	color: $c-blue-700;
+	background: $c-blue-100;
+}
+
+.context-notification-right {
+	border: $border-width-s solid $c-green-600;
+	color: $c-green-700;
+	background: $c-green-100;
+}
+
+.context-notification-wrong {
+	border: $border-width-s solid $c-red-600;
+	color: $c-red-700;
+	background: $c-red-100;
+}
+
+.context-notification-warning {
+	border: $border-width-s solid $c-yellow-600;
+	color: $c-yellow-700;
+	background: $c-yellow-100;
+}
+
+.context-notification-attention {
+	border: $border-width-s solid $c-orange-600;
+	color: $c-orange-700;
+	background: $c-orange-100;
+}

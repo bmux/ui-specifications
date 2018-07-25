@@ -1,0 +1,158 @@
+//COLOR TABLE
+$hover-change: #222222;
+
+// stylelint-disable-next-line color-named
+$c-white: white; //you can also use "white" directly
+//$c-black: //You should never use black. Use $c-gray-800 instead
+$c-gray-800: #333333;
+$c-gray-700: #666666;
+$c-gray-600: #999999;
+$c-gray-500: #AAAAAA;
+$c-gray-400: #CCCCCC;
+$c-gray-300: #DDDDDD;
+$c-gray-200: #E9E9E9;
+$c-gray-100: #F6F6F6;
+
+$c-red-800: #BB3300;
+$c-red-700: #DD4422;
+$c-red-600: #EE6644;
+$c-red-500: #FF7766;
+$c-red-400: #FF9F8C;
+$c-red-300: #FFC3BC;
+$c-red-200: #FFE6E3;
+$c-red-100: #FFF3F3;
+
+$c-green-800: #118800;
+$c-green-700: #33A300;
+$c-green-600: #55BB22;
+$c-green-500: #88D633;
+$c-green-400: #AAEE88;
+$c-green-300: #C3F3B0;
+$c-green-200: #E3FCDC;
+$c-green-100: #F0FFEC;
+
+$c-blue-800: #0077CC;
+$c-blue-700: #1188EE;
+$c-blue-600: #44AAFF;
+$c-blue-500: #77BBFF;
+$c-blue-400: #AAD6FF;
+$c-blue-300: #CAE6FF;
+$c-blue-200: #DFF0FF;
+$c-blue-100: #EEF6FF;
+
+$c-yellow-800: #997711;
+$c-yellow-700: #BF9C00;
+$c-yellow-600: #EEBB22;
+$c-yellow-500: #FFD333;
+$c-yellow-400: #FFE677;
+$c-yellow-300: #FFFABB;
+$c-yellow-200: #FFFFDD;
+$c-yellow-100: #FFFFEC;
+
+$c-orange-800: #BB6600;
+$c-orange-700: #DD7711;
+$c-orange-600: #EE9911;
+$c-orange-500: #FFAA11;
+$c-orange-400: #FFBB55;
+$c-orange-300: #FFD099;
+$c-orange-200: #FFEFDC;
+$c-orange-100: #FFF6EC;
+
+// NEW COLORS
+$c-purple-800: #662288;
+$c-purple-700: #7744AA;
+$c-purple-600: #8866BB;
+$c-purple-500: #AA99DD;
+$c-purple-400: #C9BBFF;
+$c-purple-300: #E0D0FF;
+$c-purple-200: #ECDFFF;
+$c-purple-100: #F3EEFF;
+
+$c-steel-blue-800: #0077AA;
+$c-steel-blue-700: #1188BB;
+$c-steel-blue-600: #5599CC;
+$c-steel-blue-500: #77BBDD;
+$c-steel-blue-400: #9FCFEA;
+$c-steel-blue-300: #C5DFEC;
+$c-steel-blue-200: #DBECF5;
+$c-steel-blue-100: #ECF6FC;
+
+$c-petrol-800: #007777;
+$c-petrol-700: #008888;
+$c-petrol-600: #33BBBB;
+$c-petrol-500: #66CCCC;
+$c-petrol-400: #88DDDD;
+$c-petrol-300: #CCECEC;
+$c-petrol-200: #D9F6F6;
+$c-petrol-100: #EEFCFC;
+
+$c-pink-800: #CC0077;
+$c-pink-700: #DD11BB;
+$c-pink-600: #FF22FF;
+$c-pink-500: #FF55FF;
+$c-pink-400: #FF99FF;
+$c-pink-300: #FFCCFF;
+$c-pink-200: #FFE3FF;
+$c-pink-100: #FFECFF;
+
+$c-yellow-green-800: #446600;
+$c-yellow-green-700: #668800;
+$c-yellow-green-600: #99BB00;
+$c-yellow-green-500: #BCDF33;
+$c-yellow-green-400: #CCEF77;
+$c-yellow-green-300: #DDF999;
+$c-yellow-green-200: #ECFCB3;
+$c-yellow-green-100: #F6FFE9;
+// END NEW COLORS
+
+$c-shadow-light: rgba(0, 0, 0, 0.2);
+$c-item-hover: rgba(0, 0, 0, 0.08);
+
+//BASE NAMES
+$c-text-medium: $c-gray-700;
+$c-text-dark: $c-gray-800;
+$c-text-bright: $c-gray-600;
+$c-text-link: $c-blue-700;
+$c-text-disabled: $c-gray-400;
+
+$c-text-error: $c-red-800;
+$c-text-remark: $c-yellow-800;
+$c-text-correct: $c-green-800;
+
+$c-area-border: $c-gray-500;
+$c-group-border: $c-gray-400;
+$c-element-border: $c-gray-300;
+
+$c-selected-border: $c-blue-500;
+$c-selected-background: $c-blue-200;
+$c-selected-background-hover: $c-blue-300;
+
+$c-error-border: $c-red-700;
+$c-error-background: $c-red-200;
+$c-error-background-hover: $c-red-300;
+
+$c-remark-border: $c-yellow-700;
+$c-remark-background: $c-yellow-200;
+$c-remark-background-hover: $c-yellow-300;
+
+$c-correct-border: $c-green-700;
+$c-correct-background: $c-green-200;
+$c-correct-background-hover: $c-green-300;
+
+$c-unselected-border: $c-gray-500;
+$c-unselected-background-hover: $c-gray-100;
+
+$c-disabled-border: $c-gray-300;
+$c-border-explanation: $c-blue-400;
+$c-border-answer: $c-green-500;
+
+:export {
+  // stylelint-disable property-no-unknown,property-case
+  TEXT_CORRECT: $c-text-correct;
+  BORDER_CORRECT: $c-correct-border;
+  TEXT_ERROR: $c-text-error;
+  BORDER_ERROR: $c-error-border;
+  TEXT_REMARK: $c-text-remark;
+  BORDER_REMARK: $c-remark-border;
+  // stylelint-enable property-no-unknown,property-case
+}
