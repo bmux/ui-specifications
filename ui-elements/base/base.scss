@@ -1,0 +1,68 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th,
+td, xmp {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    outline: 0;
+}
+
+.clearfix {
+    zoom: 1;
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+div.clearfloat {
+    margin: 0px;
+    padding: 0px;
+    height: 1px;
+    background: transparent;
+    clear: both;
+}
+
+.clearall {
+    clear: both;
+}
+
+* {
+  -webkit-user-select: none;
+}
+
+html,
+body {
+    height: 100%;
+    display: block;
+    font-size: 62.5%;
+}
+
+body {
+	font-family: Roboto, "Lucida Grande", "Lucida Sans Unicode", Helvetic, Arial, sans-serif;
+	font-weight: normal;
+	color: $c-text-dark;
+	font-style: normal;
+	background-color: $c-gray-300;
+	font-size: 16px;
+	line-height: 20px;
+	/* background-image: url('../ui-elements/body/img/body-pattern.png'); */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $c-text-dark;
+}
+
+body, div {
+    -webkit-overflow-scrolling: touch;
+}

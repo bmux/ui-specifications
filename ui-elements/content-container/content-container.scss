@@ -6,16 +6,16 @@
 }
 
 .content-container-header-wrapper {
-    display: table;
-    width: 100%;
+	display: table;
+	width: 100%;
 }
 
 .content-container-header {
 	font-size: $font-size-m;
 	line-height: $line-height-m;
-  position: relative;
-  display: table-row;
-  overflow: auto;
+	position: relative;
+	display: table-row;
+	overflow: auto;
 }
 
 .content-container-toggle,

@@ -1,0 +1,32 @@
+<div class="app-container app-container-padded">
+  <div class="text-block">
+      
+      <h2 class="heading heading_2">ui-specifications</h2>
+
+      <h3 class="heading heading_3">Writing CSS Rules</h3>
+      The order of the rules within an selector block has to describe the element from outside to inside and measures coming before design properties.  For example in this order:
+<pre class="prettyprint">
+<xmp>.selector {
+display: inline-block; /* behavior on the outside, growth */
+margin: 0; /* outside spacing */
+height: 2rem /* total height */
+border-width: 0.2rem /* inside dimension coming befor padding */
+border-style: solid; /* all border styles are grouped */
+border-color: #000; /* all border styles are grouped */
+padding: 0; /* general comes before specific */
+padding-left: 5rem; /* specific are ordered clockwise like general paddding: 0 5rem 5rem 0 */
+padding-bottom: 5rem; /* see previous */
+line-height: 20rem /* before font-size */
+font-size: 15rem
+color: #000;
+background-color: #DDD; /* background comes last */
+}
+</xmp></pre>        
+
+      <h3 class="heading heading_3">Lorem Ipsum</h3>
+      {% include "/blocks/button/button.doc.html" %}
+      <p>Lorem ipsum dolor.</p>                        
+      
+  </div>
+</div>
+        

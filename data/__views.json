@@ -1,0 +1,42 @@
+[
+	{
+		"uri": "home",
+		"title": "UI-specifications home",
+		"viewData" : {
+			 "views" : "__views"
+		}
+	},
+   {
+		"uri": "buttons",
+		"title": "Buttons",
+		"viewData" : {
+		}
+	},
+   {
+		"uri": "content-container",
+		"title": "Content container",
+		"viewData" : {
+		}
+	},
+	{
+	"uri": "endscreen",
+	"title": "Endscreen",
+	"viewData" : {
+	}
+	},
+
+   {
+		"uri": "context-notification",
+		"title": "Context-notification",
+		"viewData" : {
+		}
+	},
+	{
+		"uri": "documentation",
+		"title": "Documentation",
+		"viewData" : {
+		}
+	}
+]
+
+

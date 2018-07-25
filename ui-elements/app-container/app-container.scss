@@ -1,0 +1,17 @@
+.app-container {
+    height: 100%;
+    position: relative;
+    background-color: #FFF;
+    margin: 0 auto;
+    min-width:320px;
+    max-width: 1200px;
+    font-size: 16px;
+    line-height:20px;
+	 vertical-overflow: scroll;
+	overflow: scroll;
+	box-sizing: border-box;
+}
+
+.app-container-padded {
+    padding: 16px;
+}

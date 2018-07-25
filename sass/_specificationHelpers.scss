@@ -1,0 +1,59 @@
+svg {
+	display: block;
+}
+
+h2.heading {
+	font-weight: 100;
+	font-size: 24px;
+}
+
+.note {
+  font-size: $font-size-s;
+  color: $c-text-bright;
+  margin: 8px auto 24px;
+  max-width: 600px;
+}
+
+.template-title {
+  text-align: center;
+  color: $c-gray-800;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+ul.ui-specification-toc {
+	margin-top: 8px;
+	li {
+		margin: 4px 0 8px;
+		a {
+		
+		}
+	}
+}
+
+.tablet-dialog-dummy,
+.phone-dialog-dummy {
+	margin: 20px auto 80px; /* ignore */
+	background: #FFF;
+	border: 1px solid $c-area-border;
+  overflow-y: auto;
+  max-width: 600px;
+}
+
+.phone-dialog-dummy {
+	width: 320px;
+  height: 480px;
+  .endscreen {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .button-row {
+    .btnWrapper {
+        width: 100%;
+        margin-bottom: 12px;
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
