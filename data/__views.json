@@ -27,7 +27,13 @@
 
    {
 		"uri": "context-notification",
-		"title": "Context-notification",
+		"title": "Context notification",
+		"viewData" : {
+		}
+	},
+   {
+		"uri": "plain-text",
+		"title": "Plain text",
 		"viewData" : {
 		}
 	},

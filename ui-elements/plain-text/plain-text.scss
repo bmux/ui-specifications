@@ -1,0 +1,38 @@
+
+h2.heading {
+	font-weight: 100;
+	font-size: 24px;
+	margin-bottom: $space-l;
+}
+
+h4.heading {
+	font-weight: bold;
+	font-size: $font-size-m;
+	line-height: $line-height-m;
+	color: $c-text-dark;
+	margin-bottom: $space-xs;
+}
+
+.plain-text {
+	font-size: $font-size-m;
+	line-height: $line-height-m;
+	color: $c-text-dark;
+	margin-bottom: $space-xs;
+}
+
+.plain-text-wide {
+	line-height: $line-height-l;
+}
+
+.plain-text-small {
+	line-height: $line-height-s;
+	font-size: $font-size-s;
+	&.plain-text-wide {
+		line-height: $line-height-m;
+	}
+}
+
+.plain-text a {
+	color: $c-text-link;
+	text-decoration: underline;
+}
