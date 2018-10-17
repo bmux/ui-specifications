@@ -31,10 +31,17 @@
 		"viewData" : {
 		}
 	},
-   {
+	{
 		"uri": "plain-text",
 		"title": "Plain text",
 		"viewData" : {
+		}
+	},
+	{
+		"uri": "vertical-menu",
+		"title": "Vertical Menu",
+		"viewData" : {
+			 "icons" : "icons"
 		}
 	},
 	{

@@ -9,6 +9,5 @@ sass_options  = {
   :debug_info   => false
 }
 
-# output_style = :compressed
 # output_style = :compact
 output_style = :expanded
