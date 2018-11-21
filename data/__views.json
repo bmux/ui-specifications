@@ -13,6 +13,12 @@
 		}
 	},
    {
+		"uri": "calendar",
+		"title": "Calendar",
+		"viewData" : {
+		}
+	},
+   {
 		"uri": "content-container",
 		"title": "Content container",
 		"viewData" : {

@@ -1,0 +1,93 @@
+$table-cell-size: 30px;
+$table-cell-padding: 2px;
+$marked-outline-width: 1px;
+
+.calendar-month {
+	border: $border-width-s solid $c-group-border;
+	display: inline-block;
+	float: left;
+	margin: 0 $space-s $space-s 0;
+	
+	&.no-days {
+		table caption {
+			border-bottom: $border-width-s solid $c-group-border;
+			padding-bottom: $table-cell-padding * 4;
+		}
+	}
+
+	table {
+		background: $c-white;
+		border-collapse: separate;
+		caption {
+			font-size: $font-size-xl;
+			color: $c-text-bright;
+			font-weight: 200;
+			padding: $table-cell-padding * 2;
+			padding-top: $table-cell-padding * 4;
+		}
+		
+		tr:last-child {
+			td {
+				border-bottom: $border-width-m solid $c-white;
+			}
+		}
+		
+		th, td {
+			vertical-align: center;
+			font-weight: 400;
+		}
+		
+		th {
+			color: $c-text-dark;
+			border-bottom: $border-width-s solid $c-group-border;
+			padding: $table-cell-padding + $border-width-m;
+		}
+		
+		td {
+			border-top: $border-width-m solid $c-white;
+			font-size: $font-size-m;
+			line-height: $line-height-l;
+			color: $c-text-medium;
+			
+			&.mark {
+				background-color: $c-blue-300;
+				color: $c-text-link;
+			}
+		
+			&.mark-start {
+				background: $c-white; /* Old browsers */
+				background: -moz-linear-gradient(left, $c-white 0%, $c-white 50%, $c-blue-300 50%, $c-blue-300 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(left, $c-white 0%,$c-white 50%,$c-blue-300 50%,$c-blue-300 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right, $c-white 0%,$c-white 50%,$c-blue-300 50%,$c-blue-300 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c-white', endColorstr='$c-blue-300',GradientType=1 ); /* IE6-9 */		
+			}
+			
+			&.mark-end {
+				background: $c-blue-300; /* Old browsers */
+				background: -moz-linear-gradient(left, $c-blue-300 0%, $c-blue-300 50%, $c-white 50%, $c-white 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(left, $c-blue-300 0%,$c-blue-300 50%,$c-white 50%,$c-white 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right, $c-blue-300 0%,$c-blue-300 50%,$c-white 50%,$c-white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			}
+			
+			span {
+				text-align: center;
+				border: $border-width-m solid transparent;
+				border-radius: $table-cell-size;
+				padding: $table-cell-padding;
+				display: inline-block;
+				box-sizing: border-box;
+				width: $table-cell-size;
+				height: $table-cell-size;
+				min-width: 100%;
+				min-height: 100%;
+			}
+			
+			&.mark-start span,
+			&.mark-end span {
+				color: $c-text-link;
+				border-color: $c-text-link;
+				background-color: $c-blue-300;
+			}
+		}
+	}
+}
