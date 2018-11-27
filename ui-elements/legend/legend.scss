@@ -43,6 +43,7 @@ $item-spacing: $space-xs;
     padding: $item-spacing/2 $item-spacing/2;
 
 	&.legend-list-item-element-label {
+		width: auto;
 		text-align: left;
 		white-space: normal;
 		max-width: 180px;
