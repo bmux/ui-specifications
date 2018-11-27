@@ -1,0 +1,101 @@
+$fontSize: 18px;
+$itemHeight: $fontSize * 1.3;
+$slotWidth: $itemHeight;
+.Container {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #eee;
+}
+.LegendItem {
+  min-height: $itemHeight;
+  font-size: $fontSize;
+  margin: 2px 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.LegendItem_Eye {
+  width: $slotWidth;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #eee;
+}
+.LegendItem_Text {
+  padding: 0 3px;
+  flex: 1;
+  align-self: flex-start;
+  background: #eaa;
+  line-height: $fontSize;
+}
+
+
+
+
+/* New variables */
+$c-text-interactive: $c-blue-700;
+
+/* Local variables */
+$item-spacing: $space-xs; 
+
+/* CONTAINER PLACEHOLDER */
+.legend {
+	max-width: 100%;
+	display: inline-block;
+	padding: $space-xxs;
+	border: $border-width-s solid $c-element-border;
+	background-color: $c-gray-100;
+	margin: 20px; /* just for specification preview */
+}
+
+.legend-header {
+	font-weight: bold;
+	color: $c-text-dark;
+	padding: $space-xxs;
+}
+
+.legend-list {
+    display: table;
+}
+
+.legend-list-item {
+	position: relative;
+	display: table-row;
+	overflow: auto;
+	white-space: nowrap;
+	text-align: center;
+	background-color: transparent;
+}
+
+.legend-list-item-element {
+	width: 0;
+    display: table-cell;
+    color: $c-text-dark;
+    vertical-align: middle;
+    padding: $item-spacing/2 $item-spacing/2;
+
+	&.legend-list-item-element-label {
+		text-align: left;
+		white-space: normal;
+		max-width: 180px;
+	}
+}
+
+.legend-basic-shape-dummy {
+	box-sizing: border-box;
+	width: 16px;
+	height: 16px;
+	border: 1px solid black;
+	background-color: red;
+}
+
+.big-element-dummy {
+	box-sizing: border-box;
+	width: 56px;
+	height: 56px;
+	border: 1px solid black;
+	background-color: red;
+}

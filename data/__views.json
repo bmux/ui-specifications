@@ -24,6 +24,12 @@
 		"viewData" : {
 		}
 	},
+   {
+		"uri": "legend",
+		"title": "Legend",
+		"viewData" : {
+		}
+	},
 	{
 	"uri": "endscreen",
 	"title": "Endscreen",
