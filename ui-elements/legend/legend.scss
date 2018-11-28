@@ -1,25 +1,21 @@
-
-
-/* New variables */
-$c-text-interactive: $c-blue-700;
-
 /* Local variables */
-$item-spacing: $space-xs; 
+$item-spacing: $space-xxs; 
 
 /* CONTAINER PLACEHOLDER */
 .legend {
 	max-width: 100%;
 	display: inline-block;
-	padding: $space-xxs;
+	padding: $item-spacing;
 	border: $border-width-s solid $c-element-border;
 	background-color: $c-gray-100;
 	margin: 20px; /* just for specification preview */
 }
 
 .legend-header {
+	font-size: $font-size-m;
 	font-weight: bold;
 	color: $c-text-dark;
-	padding: $space-xxs;
+	padding: $item-spacing;
 }
 
 .legend-list {
@@ -36,17 +32,21 @@ $item-spacing: $space-xs;
 }
 
 .legend-list-item-element {
-	width: 0;
     display: table-cell;
     color: $c-text-dark;
     vertical-align: middle;
-    padding: $item-spacing/2 $item-spacing/2;
+    padding: $item-spacing;
+	 padding-left: $item-spacing*3;
+	 &:first-child {
+			padding-left: $item-spacing;
+	}
 
 	&.legend-list-item-element-label {
 		width: auto;
 		text-align: left;
 		white-space: normal;
 		max-width: 180px;
+	 	padding-left: $item-spacing;
 	}
 }
 
