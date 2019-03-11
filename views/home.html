@@ -1,10 +1,11 @@
- <div class="app-container app-container-padded">
-   <h2 class="heading">UI-specifications table of contents</h2>
-   <ul class="ui-specification-toc">
-   {% for view in data.viewData.views %}
-   	{% if view.uri != "home" %}
-     		<li class="ui-specification-toc-{{view.uri}}"><a href="__ui-specifications.html?view={{view.uri}}">{{view.title}}</a></li>
-   	{% endif %}
-   {% endfor %}
-   </ul>
- </div>
+<div class="app-container app-container-padded">
+    <h2 class="heading">UI-specifications table of contents</h2>
+    <ul class="ui-specification-toc">
+        {% for view in data.viewData.views %}
+        {% if view.uri != "home" %}
+        <li class="ui-specification-toc-{{view.uri}}"><a href="#{{view.uri}}">{{view.title}}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>

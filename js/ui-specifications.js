@@ -4,33 +4,17 @@
 var nunEnv = new nunjucks.Environment(new nunjucks.WebLoader(''));
 
 $(document).ready(function() {
+  locationHashChange();
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
   });
 });
 
 // CUSTOM TEMPLATE MOCK DATA LOGIC
-
-// returns the value of a key in the query string of an URL
-// if no url argument is passed, the current document URL is used
-function getQueryStringParam(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
 // retrieves the view ID/uri called in the URLs query string
 function getRequestedViewName() {
-	var view = getQueryStringParam('view');
-	if (view) {
-		return view;
-	} else {
-		return 'home';
-	}
+	var view = window.location.hash;
+	return view ? view.substr(1) : 'home';
 }
 
 // returns the base template file for the current view
@@ -49,11 +33,11 @@ function getViewSettingsAndData () {
 		if (views[i]["uri"] === requestedViewName) {
 			var viewSettings = views[i];
 			if (viewSettings["viewData"]) {
-				for (d in viewSettings["viewData"]) {
+				for (var d in viewSettings["viewData"]) {
 					viewSettings["viewData"][d] = loadData(viewSettings["viewData"][d]);
 				}
 			}
-			var viewSettingsData = { "data" : viewSettings };
+			viewSettingsData = { "data" : viewSettings };
 		}
 	}
 	return viewSettingsData;
@@ -76,5 +60,11 @@ function loadData(myURL) {
 		}
     });
     return json;
-};
+}
+
+function locationHashChange() {
+	$('body').html(nunEnv.render(getCurrentViewFile(), getViewSettingsAndData()));
+}
+
+window.addEventListener('hashchange', locationHashChange, false);
 

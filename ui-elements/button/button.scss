@@ -28,7 +28,7 @@ $btn-transparency-active: rgba(0, 0, 0, 0.05);
     line-height: 12px;
     padding: $btn-padding $btn-padding;
     .btnWrapper.reservespace & {
-      margin: 12px 0px; //20 + 12*2 = 44
+      margin: 12px 0; //20 + 12*2 = 44
     }
   }
 	&-s { // TBD
@@ -37,7 +37,7 @@ $btn-transparency-active: rgba(0, 0, 0, 0.05);
     line-height: 14px;
     padding: $btn-padding $btn-padding;
     .btnWrapper.reservespace & {
-      margin: 4px 0px; //36 + 4*2 = 44
+      margin: 4px 0; //36 + 4*2 = 44
     }
   }
 	&-m { // TBD
@@ -45,7 +45,7 @@ $btn-transparency-active: rgba(0, 0, 0, 0.05);
     font-size: 16px;
     line-height: 20px;
     .btnWrapper.reservespace & {
-      margin: 4px 0px; //36 + 4*2 = 44
+      margin: 4px 0; //36 + 4*2 = 44
     }
   }
   &-l {
@@ -53,7 +53,7 @@ $btn-transparency-active: rgba(0, 0, 0, 0.05);
     font-size: 18px;
     line-height: 20px;
     .btnWrapper.reservespace & {
-      margin: 4px 0px; //36 + 4*2 = 44
+      margin: 4px 0; //36 + 4*2 = 44
     }
   }
 	&-xl { // TBD

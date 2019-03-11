@@ -146,14 +146,14 @@ $c-unselected-background-hover: $c-gray-100;
 $c-disabled-border: $c-gray-300;
 $c-border-explanation: $c-blue-400;
 $c-border-answer: $c-green-500;
-
-:export {
-  // stylelint-disable property-no-unknown,property-case
-  TEXT_CORRECT: $c-text-correct;
-  BORDER_CORRECT: $c-correct-border;
-  TEXT_ERROR: $c-text-error;
-  BORDER_ERROR: $c-error-border;
-  TEXT_REMARK: $c-text-remark;
-  BORDER_REMARK: $c-remark-border;
-  // stylelint-enable property-no-unknown,property-case
-}
+//
+//:export {
+//  // stylelint-disable property-no-unknown,property-case
+//  TEXT_CORRECT: $c-text-correct;
+//  BORDER_CORRECT: $c-correct-border;
+//  TEXT_ERROR: $c-text-error;
+//  BORDER_ERROR: $c-error-border;
+//  TEXT_REMARK: $c-text-remark;
+//  BORDER_REMARK: $c-remark-border;
+//  // stylelint-enable property-no-unknown,property-case
+//}
