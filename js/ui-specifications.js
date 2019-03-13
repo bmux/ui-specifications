@@ -4,44 +4,44 @@
 var nunEnv = new nunjucks.Environment(new nunjucks.WebLoader(''));
 
 $(document).ready(() => {
-  locationHashChange();
-  $('pre code').each((i, block) => {
-    hljs.highlightBlock(block);
-  });
+    locationHashChange();
+    $('pre code').each((i, block) => {
+        hljs.highlightBlock(block);
+    });
 });
 
 // CUSTOM TEMPLATE MOCK DATA LOGIC
 // retrieves the view ID/uri called in the URLs query string
 function getRequestedViewName() {
-	var view = window.location.hash;
-	return view ? view.substr(1) : 'home';
+    var view = window.location.hash;
+    return view ? view.substr(1) : 'home';
 }
 
 // returns the base template file for the current view
 const getCurrentViewFile = () => ('views/' + getRequestedViewName() + '.html');
 
 // fills the view settings "viewData" object with the actual JSON data from referenced file
-function getViewSettingsAndData () {
-	var viewSettingsData = null;
-	var requestedViewName = getRequestedViewName();
-	var views = loadData('__views');
-	
-	var viewCount = views.length;
-	for (var i = 0; i < viewCount; i++) {
-		if (views[i]["uri"] === requestedViewName) {
-			var viewSettings = views[i];
-            var viewData = viewSettings["viewData"];
+function getViewSettingsAndData() {
+    var viewSettingsData = null;
+    var requestedViewName = getRequestedViewName();
+    var views = loadData('__views');
+
+    var viewCount = views.length;
+    for (var i = 0; i < viewCount; i++) {
+        if (views[i]['uri'] === requestedViewName) {
+            var viewSettings = views[i];
+            var viewData = viewSettings['viewData'];
             if (viewData) {
-				for (var d in viewData) {
-				    if(viewData.hasOwnProperty(d)) {
+                for (var d in viewData) {
+                    if (viewData.hasOwnProperty(d)) {
                         viewData[d] = loadData(viewData[d]);
                     }
-				}
-			}
-			viewSettingsData = { "data" : viewSettings };
-		}
-	}
-	return viewSettingsData;
+                }
+            }
+            viewSettingsData = {'data': viewSettings};
+        }
+    }
+    return viewSettingsData;
 }
 
 // loads JSON mock data from the data folder
@@ -51,21 +51,21 @@ function loadData(myURL) {
         'async': false,
         'global': false,
         'url': 'data/' + myURL + '.json',
-        'dataType': "json",
+        'dataType': 'json',
         'success': function (data) {
             json = data;
         },
-		'error': function (e) {
-			alert('Data load error for ' + myURL + '.json');
-			console.log(e);
-		}
+        'error': function (e) {
+            alert('Data load error for ' + myURL + '.json');
+            console.log(e);
+        }
     });
     return json;
 }
 
 function locationHashChange() {
     var context = getViewSettingsAndData();
-    if(context) {
+    if (context) {
         document.title = context.data.title;
     }
     try {
@@ -77,17 +77,17 @@ function locationHashChange() {
 }
 
 function handleKeyPress(event) {
-    if(event.key === 'h' || event.key === '0') {
+    if (event.key === 'h' || event.key === '0') {
         window.location.hash = '#home';
         event.preventDefault();
         return;
     }
     var pos = parseInt(event.key, 16);
-    if(pos > 0) {
+    if (pos > 0) {
         var views = loadData('__views');
         var view = views[pos];
         if (view && view.uri) {
-            window.location.hash = '#'+view.uri;
+            window.location.hash = '#' + view.uri;
             event.preventDefault();
         }
     }
@@ -98,5 +98,5 @@ window.addEventListener('hashchange', locationHashChange, false);
 
 window.addEventListener('contentChanged', () => {
     // refresh code prettyPrint. see https://github.com/google/code-prettify
-    if(PR && PR.prettyPrint) PR.prettyPrint();
+    if (PR && PR.prettyPrint) PR.prettyPrint();
 });
