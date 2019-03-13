@@ -1,10 +1,7 @@
-$(document).ready( function() {
-	toggleContentContainer();
+window.addEventListener('contentChanged', () => {
+	$(".content-container-toggle-btn").click( (event) => {
+		$(event.currentTarget).parents(".content-container").children(".content-container-body-wrapper").slideToggle();
+		$(event.currentTarget).parents(".content-container").toggleClass("content-container-closed");
+	})
 });
 
-function toggleContentContainer() {
-	$(".content-container-toggle-btn").click(function () {
-	  $(this).parents(".content-container").children(".content-container-body-wrapper").slideToggle();
-	  $(this).parents(".content-container").toggleClass("content-container-closed");
-	})
-}

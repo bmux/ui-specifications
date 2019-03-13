@@ -3,9 +3,9 @@
 // NUNJUCKS SETUP
 var nunEnv = new nunjucks.Environment(new nunjucks.WebLoader(''));
 
-$(document).ready(function() {
+$(document).ready(() => {
   locationHashChange();
-  $('pre code').each(function(i, block) {
+  $('pre code').each((i, block) => {
     hljs.highlightBlock(block);
   });
 });
@@ -18,9 +18,7 @@ function getRequestedViewName() {
 }
 
 // returns the base template file for the current view
-function getCurrentViewFile (){
-	return  'views/' + getRequestedViewName() + '.html';
-}
+const getCurrentViewFile = () => ('views/' + getRequestedViewName() + '.html');
 
 // fills the view settings "viewData" object with the actual JSON data from referenced file
 function getViewSettingsAndData () {
@@ -32,9 +30,12 @@ function getViewSettingsAndData () {
 	for (var i = 0; i < viewCount; i++) {
 		if (views[i]["uri"] === requestedViewName) {
 			var viewSettings = views[i];
-			if (viewSettings["viewData"]) {
-				for (var d in viewSettings["viewData"]) {
-					viewSettings["viewData"][d] = loadData(viewSettings["viewData"][d]);
+            var viewData = viewSettings["viewData"];
+            if (viewData) {
+				for (var d in viewData) {
+				    if(viewData.hasOwnProperty(d)) {
+                        viewData[d] = loadData(viewData[d]);
+                    }
 				}
 			}
 			viewSettingsData = { "data" : viewSettings };
@@ -63,8 +64,39 @@ function loadData(myURL) {
 }
 
 function locationHashChange() {
-	$('body').html(nunEnv.render(getCurrentViewFile(), getViewSettingsAndData()));
+    var context = getViewSettingsAndData();
+    if(context) {
+        document.title = context.data.title;
+    }
+    try {
+        $('body').html(nunEnv.render(getCurrentViewFile(), context));
+    } catch (exception) {
+        $('body').html('<div class="app-container app-container-padded"><h1>Oops, an error occurred!</h1><div class="content-container  content-container-wrong" style="margin: 16px 0;"><pre class="content-container-body">' + exception + '</pre></div><a href="#home">show home page (press h)</a> </div>');
+    }
+    window.dispatchEvent(new CustomEvent('contentChanged', {title: document.title, selector: 'body'}));
 }
 
+function handleKeyPress(event) {
+    if(event.key === 'h' || event.key === '0') {
+        window.location.hash = '#home';
+        event.preventDefault();
+        return;
+    }
+    var pos = parseInt(event.key, 16);
+    if(pos > 0) {
+        var views = loadData('__views');
+        var view = views[pos];
+        if (view && view.uri) {
+            window.location.hash = '#'+view.uri;
+            event.preventDefault();
+        }
+    }
+}
+
+document.addEventListener('keydown', handleKeyPress, false);
 window.addEventListener('hashchange', locationHashChange, false);
 
+window.addEventListener('contentChanged', () => {
+    // refresh code prettyPrint. see https://github.com/google/code-prettify
+    if(PR && PR.prettyPrint) PR.prettyPrint();
+});
